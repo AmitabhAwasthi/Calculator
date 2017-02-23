@@ -1,0 +1,7 @@
+1.
+With the given minimalist example, we can also modify the get applyMarketUpdate(MarketUpdate marketUpdate)
+"TO"
+applyMarketUpdate(Market, Instrument, State, bidPrice, offerPrice, bidAmount, offerAmount)
+Once the above is done, we can keep a Mutable version of TwoWayPrice in the PriceCache and apply the updates there.
+This way we can avoid the extra TwoWayPrice object creation for each incoming market data update.
+
